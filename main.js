@@ -70,8 +70,8 @@ function photoCardTemplate(photo) {
         </figcaption>
       </figure> 
       <section class="card-buttons">
-        <button><img src="fotofinder-assets/delete.svg" class="delete-svg" id="delete" alt="image of a trash icon used to delete a card"></button>
-        <button class="favorite-button favorite-svg" alt="when favorited by user, heart image changes color to pink"></button>
+        <button><img src="fotofinder-assets/delete.svg" class="delete-svg" id="delete" alt="Trash icon used to delete a card"></button>
+        <button class="favorite-button favorite-svg" alt="When favorited, heart changes color to pink"></button>
       </section>
     </article>`;
   photoContainer.insertAdjacentHTML("afterbegin", displayPhoto);
