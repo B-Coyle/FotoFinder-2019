@@ -245,10 +245,10 @@ h2 {
   width: 100%;
 }
 
-/*.hidden {
+.hidden {
   display: none;
 }
-*/
+
 .show-more-btn {
   cursor: pointer;
   border: 0;

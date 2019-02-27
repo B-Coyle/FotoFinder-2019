@@ -7,7 +7,7 @@ var createPhoto = document.querySelector('.add-photos');
 const card = document.querySelector('.photo-card');
 var filterFavorite = document.querySelector('.filter-photo');
 var photoContainer = document.querySelector('.output-photo');
-var reader = new FileReader();
+var reader = new FileReader(); 
 var favCounter = 0;
 
 
@@ -204,24 +204,14 @@ function displayAlertMessage() {
 }
 
 // ~~~~~~~
-// function moreIdeas() {
-//   showMoreBtn.classList.add('hidden');
-//   showLessBtn.classList.remove('hidden');
-//   var ideas = localStorage.photos || '[]';
-//   photos = JSON.parse(photos);
-//   if (!photos) {
-//       return false;
-//     } else {
-//       storageEl.innerHTML = '';
-//       for (var i = 0; i < photos.length; i++) {
-//         makePhoto(photos, i);
-//     }
+// showMoreBtn.addEventListener('click', showMoreLess);
+
+// function showMoreLess() {
+//   if(showMoreBtn.innerText === 'Show More') {
+//     makePhotos();
+//     showMoreBtn.innerText === 'Show Less';
+//   } else if (showMoreBtn.innerText === 'Show Less'){
+//     clearDOM(10);
+//     showMoreBtn.innerText = 'Show More';
 //   }
 // }
-
-// function lessIdeas() {
-//   showMoreBtn.classList.remove('hidden');
-//   showLessBtn.classList.add('hidden');
-//   var ideas = localStorage.ideas || '[]';
-//   ideas = JSON.parse(photos);
-//   makePhoto(photos);
