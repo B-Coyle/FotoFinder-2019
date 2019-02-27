@@ -1,4 +1,4 @@
-<h1>FotoFinder 2019/h1>
+<h1>FotoFinder 2019</h1>
 <h2>Bridgett Coyle</h2>
 
 <h2>Project Overview</h2>
