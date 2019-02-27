@@ -1,5 +1,7 @@
 var photos = JSON.parse(localStorage.getItem('photos')) || [];
 var searchBar = document.querySelector('#search-bar');
+var title = document.querySelector('#title-input');
+var caption = document.querySelector('#caption-textarea');
 var chooseFile = document.querySelector('#choose-file');
 var createPhoto = document.querySelector('.add-photos');
 const card = document.querySelector('.photo-card');
@@ -38,8 +40,6 @@ function clickEventHandler(e, photo) {
 
 function makePhoto(e) {
   e.preventDefault();
-  var title = document.querySelector('#title-input');
-  var caption = document.querySelector('#caption-textarea');
   if(title.value === '' || caption.value === '') {
     alert('Please enter a title and caption for your photo.')
   } else {
@@ -203,7 +203,25 @@ function displayAlertMessage() {
   displayMessage.classList.remove('remove');
 }
 
-function disableAdd() {
-  if ('#title-input' !== '' && )
-}
-createPhoto.disabled = false;
+// ~~~~~~~
+// function moreIdeas() {
+//   showMoreBtn.classList.add('hidden');
+//   showLessBtn.classList.remove('hidden');
+//   var ideas = localStorage.photos || '[]';
+//   photos = JSON.parse(photos);
+//   if (!photos) {
+//       return false;
+//     } else {
+//       storageEl.innerHTML = '';
+//       for (var i = 0; i < photos.length; i++) {
+//         makePhoto(photos, i);
+//     }
+//   }
+// }
+
+// function lessIdeas() {
+//   showMoreBtn.classList.remove('hidden');
+//   showLessBtn.classList.add('hidden');
+//   var ideas = localStorage.ideas || '[]';
+//   ideas = JSON.parse(photos);
+//   makePhoto(photos);
