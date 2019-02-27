@@ -17,3 +17,11 @@ Mobile View
 
 <h3>Recreated Comp</h3>
 
+Full Desktop View
+
+[![localhost-3000-index-html-3.png](https://i.postimg.cc/m2NHgvx3/localhost-3000-index-html-3.png)](https://postimg.cc/gnjJMB2r)
+
+Mobile View
+
+[![localhost-3000-index-html-i-Phone-6-7-8-Plus.png](https://i.postimg.cc/X73rmsZr/localhost-3000-index-html-i-Phone-6-7-8-Plus.png)](https://postimg.cc/Jt67Bc58)
+
