@@ -1,0 +1,421 @@
+*:focus {
+  outline:none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #938284;
+}
+
+.fa-search {
+  background-color: #C2B2B4;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: content-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 7px 7px 1px 7px;
+}
+
+.foto-finder-logo {
+  height: 40px;
+  vertical-align: top;
+  width: 50px;
+}
+
+header {
+  background-color: #3E2A35;
+  color: #FFFFFF;
+  display: flex;
+}
+
+header form {
+  background: #D2CCCD;
+}
+
+.header-title h1 {
+  font-size: 40px;
+  letter-spacing: .5px;
+  margin-left: 2rem;
+  padding-right: 16px;
+}
+
+.header-title {
+  display: flex;
+  margin-right: 0;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5% 0 auto;
+}
+
+nav input {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 30px;
+  width: 200px;
+}
+
+::placeholder {
+  color: gray;
+}
+
+#search-bar {
+  color: #D2CCCD;
+  font-size: 1.3em;
+  height: 34px;
+  padding: 5px 50px 5px 10px;
+  outline: none;
+  width: 100%;
+}
+
+.search-area {
+  display: flex;
+}
+
+.add-photos {
+  background-color: #5B4447;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  font-weight: 100;
+  margin: 1.5rem 0 1.5rem 0;
+  outline: none;
+  padding: .75rem 1rem;
+  width: 40%;
+}
+
+#choose-file {
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.filter-photo {
+  background-color: #5B4447;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  font-weight: 100;
+  margin: 1.5rem 6.5rem 1.5rem 0;
+  outline: none;
+  padding: .75rem 1rem;
+  width: 40%;
+}
+
+.user-file-label {
+  background-color: #5B4447;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 100;
+  margin: 1.5rem 0;
+  min-width: 550px;
+  padding: .75rem 0;
+  text-align: center;
+  width: 33%;
+}
+
+.user-title-input, 
+.user-caption-textarea {
+  min-height: 45px;
+  outline-color: pink;
+  outline-width: 7px;
+}
+
+.user-file-label:hover, 
+.add-photos:hover,
+.filter-photo:hover {
+  background-color: #938284;
+  cursor: pointer;
+}
+
+.input-header {
+  font-size: 1.35em;
+  margin-bottom: .5rem;
+}
+
+label {
+  color: #FFFFFF;
+  font-weight: lighter;
+  margin-top: 1rem;
+}
+
+main {
+  align-items: center;
+  background-color: #3E2A35;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  min-width: 550px;
+  width: 33%;
+}
+
+.alert {
+  margin-left: 40%;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+button {
+  background-color:#5B4447;
+  border: none;
+  height: 39px;
+  padding: 0;
+}
+
+.card-buttons {
+  background-color: #5B4447;
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+
+.delete-svg,
+.favorite-svg,
+.delete-active-svg,
+.favorite-active-svg {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 50px;
+}
+
+.delete-svg:hover,
+.favorite-svg:hover {
+  cursor: pointer;
+}
+
+.favorite-svg {
+  background-image: url("fotofinder-assets/favorite.svg");
+}
+
+.favorite-active-svg {
+  background-image: url("fotofinder-assets/favorite-active.svg");
+}
+
+figcaption {
+  color: #3E2A35;
+  font-size: 1em;
+  font-weight: bold;
+  height: 90px;
+  outline: none;
+  padding: 2px 0 0 5px;
+}
+
+figure {
+  width: 100%;
+  margin: 0 auto;
+}
+
+figure img {
+  height: 155px;
+}
+
+.photo-card {
+  background-color: #FCFCFC;
+  border: 1px solid #3E2A35;
+  font-family: "Times New Roman", serif;
+  height: 325px;
+  margin: 2% 2%;
+  padding: 10px 0 0 0;
+  text-align: left;
+  width: 225px;
+}
+
+h2 {
+  color: #3E2A35;
+  font-size: 1em;
+  margin: 0;
+  padding: 2px 0 10px 5px;
+  outline: none;
+}
+
+footer {
+  background-color: #938284;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0 100px 20px;
+}
+
+@media screen and (max-width: 750px) {
+
+  .alert {
+    color: #FFFFFF;
+    margin-left: 30%;
+    width: 100%;
+  }
+
+  .filter-photo,
+  .add-photos {
+    width: 50%;
+  }
+
+  .user-file-label{
+    min-width: 0;
+    width: 100%;
+  }
+
+  .foto-finder-logo {
+    height: 65px;
+    vertical-align: text-bottom;
+    width: 65px;
+  }
+
+  footer{
+    justify-content: space-around;
+  }
+
+  header {
+    display: block;
+  }
+
+  .header-title {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .header-title h1 {
+    font-size: 55px;
+    margin: 0 auto;
+    padding: 10px;
+    letter-spacing: 3px;
+  }
+
+  main form {
+    min-width: 0;
+    width: 90%;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  nav input {
+     width: 520px;
+  }
+
+  .photo-card {
+    margin: 5% 2%;
+    min-width: 0;
+  }
+
+  .search-area {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%; 
+  }
+
+  .view-add-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .view-add-buttons button {
+    margin: 0, auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  
+  .alert {
+    color: #FFFFFF;
+    margin-left: 20%;
+    width: 100%;
+  }
+
+  .header-title h1{
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin: .5em auto 0 auto;
+  }
+
+  .search-area {
+    margin-bottom: 1em;
+  }
+
+  main form {
+    min-width: 0;
+  }
+
+  .photo-card {
+    margin: 20px 5% 20px 18%;
+    min-width: 0;
+  }
+
+   .view-add-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0, auto;
+    padding: 0;
+  }
+
+  .filter-photo {
+    margin-right: 10px;
+  }
+
+  footer{
+    justify-content: space-between;
+  }
+
+  .foto-finder-logo {
+    height: 45px;
+    vertical-align: text-bottom;
+    width: 45px;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  
+  .header-title h1{
+    font-size: 25px;
+    margin: .5em auto 0 auto;
+  }
+
+  .search-area {
+    margin-bottom: 1em;
+  }
+
+  main form {
+    min-width: 0;
+  }
+
+  .photo-card {
+    margin: 20px 5% 20px 0;
+    min-width: 0;
+  }
+
+   .view-add-buttons {
+    display: block;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    padding: 0;
+  }
+
+  .filter-photo,
+  .add-photos {
+    margin: 0 auto 10% auto;
+    width: 100%;
+  }
+
+  footer{
+    justify-content: center;
+  }
+
+  .foto-finder-logo {
+    height: 35px;
+    vertical-align: text-bottom;
+    width: 35px;
+  }
+}

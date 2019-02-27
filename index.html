@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet"  type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, 
+  user-scalable=no, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <section class="header-title">
+      <h1>FOTO<img src="fotofinder-assets/Foto-Finder-logo.svg" height="40" width="40" class="foto-finder-logo" alt="Display of application logo that includes an orange camera">FINDER</h1>
+    </section>
+    <nav>
+      <section class="search-area">
+        <input type="search" name="search" placeholder=" Search" id="search-bar">
+        <i class="fas fa-search"></i>
+      </section>  
+    </nav>
+  </header>
+  <main>
+    <form alt="Input form for users to submit a title, caption, and image to the application">
+      <label for="title-input" class="input-header user-title-label">Title</label>
+      <input type="text" id="title-input" class="user-title-input">
+      <label for="caption-textarea" class="input-header user-caption-label">Caption</label>
+      <input type="text" id="caption-textarea" class="user-caption-textarea">
+      <label for="choose-file" class="input-header user-file-label">Choose File</label>
+      <input type="file" id="choose-file" accept="image/*" class="user-file-input">
+        <section class="view-add-buttons">
+          <input type="submit" value="View Favorites" class="filter-photo">
+          <input type="submit" value="Add to Album" class="add-photos">
+        </section>
+    </form>
+  </main>
+  <footer class="output-photo" alt="Alert appears when no images added to album">
+    <h1 class="alert" alt="Alert reads Add a photo above">Add photos above!</h1>
+  </footer>
+  <script type="text/javascript" src="photo.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
