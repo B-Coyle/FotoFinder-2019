@@ -1,11 +1,11 @@
 *:focus {
-  outline:none;
   box-sizing: border-box;
+  outline:none;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   background-color: #938284;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .fa-search {
@@ -60,12 +60,8 @@ nav input {
   width: 200px;
 }
 
-::placeholder {
-  color: gray;
-}
-
 #search-bar {
-  color: #D2CCCD;
+  color: #938284;
   font-size: 1.3em;
   height: 34px;
   padding: 5px 50px 5px 10px;
@@ -110,7 +106,6 @@ nav input {
 .user-file-label {
   background-color: #5B4447;
   color: white;
-  font-size: 1.25em;
   font-weight: 100;
   margin: 1.5rem 0;
   min-width: 550px;
@@ -157,12 +152,6 @@ main form {
   flex-direction: column;
   min-width: 550px;
   width: 33%;
-}
-
-.alert {
-  margin-left: 40%;
-  color: #FFFFFF;
-  width: 100%;
 }
 
 button {
@@ -220,15 +209,11 @@ figure img {
   height: 155px;
 }
 
-.photo-card {
-  background-color: #FCFCFC;
-  border: 1px solid #3E2A35;
-  font-family: "Times New Roman", serif;
-  height: 325px;
-  margin: 2% 2%;
-  padding: 10px 0 0 0;
-  text-align: left;
-  width: 225px;
+footer {
+  background-color: #938284;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0 100px 20px;
 }
 
 h2 {
@@ -239,11 +224,25 @@ h2 {
   outline: none;
 }
 
-footer {
-  background-color: #938284;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px 0 100px 20px;
+.photo-card {
+  background-color: #FCFCFC;
+  border: 1px solid #3E2A35;
+  font-family: 'Roboto', sans-serif;
+  height: 325px;
+  margin: 2% 2%;
+  padding: 10px 0 0 0;
+  text-align: left;
+  width: 225px;
+}
+
+.remove {
+  display: none;
+}
+
+.alert {
+  margin-left: 40%;
+  color: #FFFFFF;
+  width: 100%;
 }
 
 @media screen and (max-width: 750px) {

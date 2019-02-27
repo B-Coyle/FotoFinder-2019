@@ -13,8 +13,8 @@ class Photo {
   }
 
   deleteFromStorage() {
-    var cards = photos.indexOf(this); 
-    photos.splice(cards, 1);
+    var i = photos.indexOf(this); 
+    photos.splice(i, 1);
     var stringifiedPhotos = JSON.stringify(photos);
     localStorage.setItem('photos', stringifiedPhotos);
   }
