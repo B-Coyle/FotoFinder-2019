@@ -12,6 +12,7 @@ Full Desktop View
 
 
 Mobile View 
+
 [![frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png](https://i.postimg.cc/zByHG4J7/frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png)](https://postimg.cc/ygz8fQ33)
 
 <h2>Recreated Comp</h2>
