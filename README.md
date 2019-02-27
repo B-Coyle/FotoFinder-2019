@@ -8,11 +8,11 @@
 
 Full Desktop View
 
-[frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png](https://postimg.cc/DSgStc6W)
+[![frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png](https://i.postimg.cc/g093LS6K/frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png)](https://postimg.cc/DSgStc6W)
+
 
 Mobile View 
-[frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png](https://postimg.cc/ygz8fQ33)
-
+[![frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png](https://i.postimg.cc/zByHG4J7/frontend-turing-io-assets-images-projects-foto-finder-fotofinder.png)](https://postimg.cc/ygz8fQ33)
 
 <h2>Recreated Comp</h2>
 
