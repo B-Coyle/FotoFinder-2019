@@ -19,13 +19,32 @@ photoContainer.addEventListener('focusout', editCard);
 
 onPageLoad(photos);
 
+function photoCardTemplate(photo) {
+ var displayPhoto = `<article class="photo-card" data-index=${photo.id}>
+      <h2 class="photo-title" contentEditable="true">${photo.title}</h2> 
+      <figure class="photo-place">
+        <img src="${photo.file}" width="100%" class="user-image" id="imagery">
+        <figcaption class="photo-caption" contentEditable="true">
+          ${photo.caption}
+        </figcaption>
+      </figure> 
+      <section class="card-buttons">
+        <button><img src="fotofinder-assets/delete.svg" class="delete-svg" id="delete" alt="Trash icon used to delete a card"></button>
+        <button class="favorite-button favorite-svg" alt="When favorited, heart changes color to pink"></button>
+      </section>
+    </article>`;
+  photoContainer.insertAdjacentHTML("afterbegin", displayPhoto);
+  keepFavoriteStatus(photo);
+  emptyAlertMessage();
+}
+
 function onPageLoad(parsedPhotos) {
   photos = [];
   parsedPhotos.forEach(function(photo) {
     var restoredPhoto = new Photo(photo.id, photo.title, photo.caption, photo.file, photo.favorite);
     photos.push(restoredPhoto);
     photoCardTemplate(restoredPhoto);
-    reflectFavoriteCardsNumber();
+    reflectFavNumber();
   });
 }
 
@@ -47,9 +66,13 @@ function makePhoto(e) {
     photos.push(newPhoto)
     newPhoto.saveToStorage(photos);
     photoCardTemplate(newPhoto);
+    clearInputs();
+  }
+}
+
+function clearInputs () {
     title.value = '';
     caption.value = '';
-  }
 }
 
 function loadPhoto(e) {
@@ -58,25 +81,6 @@ function loadPhoto(e) {
     reader.readAsDataURL(chooseFile.files[0]);
     reader.onload = makePhoto;
   }
-}
-
-function photoCardTemplate(photo) {
- var displayPhoto = `<article class="photo-card" data-index=${photo.id}>
-      <h2 class="photo-title" contentEditable="true">${photo.title}</h2> 
-      <figure class="photo-place">
-        <img src="${photo.file}" width="100%" class="user-image" id="imagery">
-        <figcaption class="photo-caption" contentEditable="true">
-          ${photo.caption}
-        </figcaption>
-      </figure> 
-      <section class="card-buttons">
-        <button><img src="fotofinder-assets/delete.svg" class="delete-svg" id="delete" alt="Trash icon used to delete a card"></button>
-        <button class="favorite-button favorite-svg" alt="When favorited, heart changes color to pink"></button>
-      </section>
-    </article>`;
-  photoContainer.insertAdjacentHTML("afterbegin", displayPhoto);
-  keepFavoriteStatus(photo);
-  emptyAlertMessage();
 }
 
 function editCard(e) {
@@ -111,6 +115,14 @@ function deletePhotos(e) {
   }
 }
 
+function keepFavoriteStatus(photo) {
+    if(photo.favorite === true) {
+      var matchingCard = document.querySelector(`[data-index="${photo.id}"]`);
+      var favIcon = matchingCard.querySelector('.favorite-svg');
+      favIcon.classList.add('favorite-active-svg');
+    }
+}
+
 function toggleFavoritePhoto(e) {
   var photoToFavorite = findCorrectPhoto(e);
   if(photoToFavorite.favorite === false) {
@@ -127,22 +139,14 @@ function toggleFavoritePhoto(e) {
   photoToFavorite.saveToStorage();
 }
 
-function keepFavoriteStatus(photo) {
-    if(photo.favorite === true) {
-      var matchingCard = document.querySelector(`[data-index="${photo.id}"]`);
-      var favIcon = matchingCard.querySelector('.favorite-svg');
-      favIcon.classList.add('favorite-active-svg');
-    }
-}
-
 function searchCards(e){
   var searchBarText = e.target.value;
   var regex = new RegExp(searchBarText, 'i');
-  var matchingPhotos = [];
+  var photosMatch = [];
   clearCards();
   for (let i = 0; i < photos.length; i++) {
     if(regex.test(photos[i].title) || regex.test(photos[i].caption)) {
-      matchingPhotos.push(photos[i]);
+      photosMatch.push(photos[i]);
       photoCardTemplate(photos[i]);
     }
   }
@@ -155,7 +159,17 @@ function clearCards() {
   });
 }
 
-function reflectFavoriteCardsNumber() {
+function emptyAlertMessage() {
+  var displayMessage = document.querySelector('.alert');
+  displayMessage.classList.add('remove');
+}
+
+function displayAlertMessage() {
+  var displayMessage = document.querySelector('.alert');
+  displayMessage.classList.remove('remove');
+}
+
+function reflectFavNumber() {
     var favoriteButton = document.querySelector('.favorite-button');
     if(favoriteButton.classList.contains('favorite-active-svg')) {
     favCounter++;
@@ -193,20 +207,13 @@ function displayFavoriteCards() {
   filterFavorite.value = 'Show All Photos';
 }
 
-function emptyAlertMessage() {
-  var displayMessage = document.querySelector('.alert');
-  displayMessage.classList.add('remove');
-}
-
-function displayAlertMessage() {
-  var displayMessage = document.querySelector('.alert');
-  displayMessage.classList.remove('remove');
-}
-
 // ~~~~~~~
 // showMoreBtn.addEventListener('click', showMoreLess);
 
 // function showMoreLess() {
+  // need buttons in html
+  // button html needs to change on toggle (from show more to show less)
+  // 
 //   if(showMoreBtn.innerText === 'Show More') {
 //     makePhotos();
 //     showMoreBtn.innerText === 'Show Less';
