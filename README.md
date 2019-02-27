@@ -11,7 +11,7 @@
   <li>DRY Javascript</li>
   <li>localStorage to persist data</li>
   <li>Iterate through/filter dom elements using for loops/array prototype methods</li>
-  <liUnderstand the difference between the data model and how the data is displayed on the DOMli>
+  <li>Understand the difference between the data model and how the data is displayed on the DOM<li>
   <li>Ability to match/recreate a UI and create a great UX</li>
 
 <h3>Personal Insight</h3>
