@@ -1,10 +1,10 @@
+var photos = JSON.parse(localStorage.getItem('photos')) || [];
+var searchBar = document.querySelector('#search-bar');
 var chooseFile = document.querySelector('#choose-file');
 var createPhoto = document.querySelector('.add-photos');
 const card = document.querySelector('.photo-card');
-var searchBar = document.querySelector('#search-bar');
 var filterFavorite = document.querySelector('.filter-photo');
 var photoContainer = document.querySelector('.output-photo');
-var photos = JSON.parse(localStorage.getItem('photos')) || [];
 var reader = new FileReader();
 var favCounter = 0;
 
@@ -204,6 +204,6 @@ function displayAlertMessage() {
 }
 
 function disableAdd() {
-  if ('#title-input')
+  if ('#title-input' !== '' && )
 }
 createPhoto.disabled = false;
