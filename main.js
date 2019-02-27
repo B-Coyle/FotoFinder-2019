@@ -60,14 +60,14 @@ function clickEventHandler(e, photo) {
 function makePhoto(e) {
   e.preventDefault();
   if(title.value === '' || caption.value === '') {
-    alert('Enter a title and caption for your photo album.')
     // createPhoto.disabled = true;
+    alert('Enter a title and caption for your photo album.')
   } else {
+    // createPhoto.disabled = false;
     var newPhoto = new Photo(Date.now(), title.value, caption.value, e.target.result, false);
     photos.push(newPhoto)
     newPhoto.saveToStorage(photos);
     photoCardTemplate(newPhoto);
-    // createPhoto.disabled = false;
     clearInputs();
   }
 }
