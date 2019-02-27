@@ -245,6 +245,25 @@ h2 {
   width: 100%;
 }
 
+/*.hidden {
+  display: none;
+}
+*/
+.show-more-btn {
+  cursor: pointer;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  font-weight: 100;
+  margin: 1.5rem 6.5rem 1.5rem 0;
+  outline: none;
+  padding: .75rem 1rem;
+}
+
+.show-more-btn:hover {
+  background-color: #3E2A35;
+}
+
 @media screen and (max-width: 750px) {
 
   .alert {
